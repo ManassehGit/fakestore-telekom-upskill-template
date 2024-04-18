@@ -6,13 +6,19 @@ import { LoginComponent } from './login/login.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ViewCartComponent } from './view-cart/view-cart.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     TopnavComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    PageNotFoundComponent,
+    ViewCartComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
