@@ -1,4 +1,3 @@
-
 <div class="product-details-page">
     <div class="card-item">
         <a [routerLink]="'/'">Go back</a>
@@ -25,11 +24,11 @@
             <span>$ {{productDetails.price}}</span>
         </div>
         <div class="add-to-cart">
-            <form (ngSubmit)="addToCart()" class="form-input">
-                <button type="submit" class="login-button">-</button>
+            <form (ngSubmit)="addToCart(productDetails)" class="form-input">
+                <button type="button" class="cart-button" (click)="decreaseQuantity()">-</button>
                 <input type="number" id="orderQuantity" name="orderQuantity" [(ngModel)]="orderQuantity" required />
-                <button type="submit" class="login-button">+</button>
-                <button type="submit" class="login-button">Add to Cart</button>    
+                <button type="button" class="cart-button" (click)="increaseQuantity()">+</button>
+                <button type="submit" class="cart-button">Add to Cart</button>    
             </form>
         </div>
     </div>

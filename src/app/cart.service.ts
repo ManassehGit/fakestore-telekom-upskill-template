@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
 import { ProductType } from './product-type';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { CartObject } from './cart-object';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  private cartItems: ProductType[] = [];
-  constructor() { }
+  private cartItems: {product: ProductType, quantity: number}[] = [];
+  private baseUrl: string = "https://fakestoreapi.com";
 
-  addToCart(item: ProductType){
-    this.cartItems.push(item);
+  constructor(private http: HttpClient) { }
+
+  addToCart(itemObject: {product: ProductType, quantity: number}){
+    this.cartItems.push(itemObject);
+    return this.cartItems.length;
   }
 
-  getCartItems(): ProductType[]{
-    return this.cartItems;
+  getCartItems():  Observable<CartObject>{
+    return this.http.get<CartObject>(`${this.baseUrl}/carts/${1}`);
   }
 }

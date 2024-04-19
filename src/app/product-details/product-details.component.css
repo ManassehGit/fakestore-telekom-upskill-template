@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .product-details-page p{
@@ -93,4 +94,8 @@
 
 .add-to-cart .form-input input{
     width: 4rem;
+}
+
+.add-to-cart .form-input .cart-button:hover{
+    background-color: #0c4a88;
 }

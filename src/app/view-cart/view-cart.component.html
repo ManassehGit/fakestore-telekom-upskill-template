@@ -1,1 +1,17 @@
-<p>view-cart works!</p>
+<div>
+    <div>
+        <h2>Cart Items</h2>
+    </div>
+    <div>
+        <ul class="product-items">
+            <li *ngFor="let item of cartItemsList.products" class="card-item">
+                <a [routerLink]="['/product', item.productId]">
+                    <div class="card-info">
+                        <app-cart-item [itemId]="item.productId"></app-cart-item>
+                        <p>quantity: {{item.quantity}}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
