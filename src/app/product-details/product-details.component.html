@@ -1,10 +1,32 @@
 
-<div class="card-item">
-    <div class="card-image">
-        <img width="200" src="{{productDetails.image}}" alt="{{productDetails.title}}" />
+<div class="product-details-page">
+    <div class="card-item">
+        <a [routerLink]="'/'">Go back</a>
+        <div class="card-image">
+            <img width="300" src="{{productDetails.image}}" alt="{{productDetails.title}}" />
+        </div>
     </div>
-    <div class="card-info">
-        <h3>{{productDetails.title}}</h3>
-        <p>{{productDetails.description}}</p>
+    <div class="other-details">
+        <div>
+            <h3>{{productDetails.title}}</h3>
+        </div>
+        <div>
+            <span class="product-count">{{productDetails.rating.count}}</span>
+            <span class="product-left">Left</span>
+        </div>
+        <div>
+            <p>Rating: {{productDetails.rating.rate}}</p>
+        </div>
+        <div>
+            <p>Category: {{productDetails.category}}</p>
+        </div>
+        <div class="product-price">
+            <p>Product Price:</p>
+            <span>$ {{productDetails.price}}</span>
+        </div>
     </div>
+</div>
+<div class="product-details">
+    <h3>Product Details</h3>
+    <p>{{productDetails.description}}</p>
 </div>
