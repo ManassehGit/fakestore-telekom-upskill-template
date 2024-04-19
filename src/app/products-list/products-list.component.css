@@ -7,12 +7,34 @@
 
 .card-item {
     position: relative;
+    display: flex;
+    width: 20%;
+    border: 1px solid gray;
 }
 
+.card-item a{
+    text-decoration: none;
+    color: black;
+}
+
+.card-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+  }
+
 .card-image {
-    position: relative;
+    height: 50%;
+    padding: 1rem;
 }
 
 .card-info{
-    position: relative;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.55);
+    bottom: 0px;
+    width: 100%;
+}
+
+.card-info h3 {
+    padding: 0.5rem 1rem;
+    color: white;
 }

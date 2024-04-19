@@ -8,14 +8,16 @@ import { ProductType } from './product-type';
 })
 export class GetProductsService {
 
+  private baseUrl: string = "https://fakestoreapi.com";
+
   constructor(private http: HttpClient) { }
 
   fetchProducts(): Observable<ProductType[]> {
-    return this.http.get<ProductType[]>('https://fakestoreapi.com/products');
+    return this.http.get<ProductType[]>(`${this.baseUrl}/products`);
   }
 
   fetchProductDetails(id: number): Observable<ProductType>{
-    return this.http.get<ProductType>('https://fakestoreapi.com/products/'+id);
+    return this.http.get<ProductType>(`${this.baseUrl}/products/${id}`);
   }
 }
 

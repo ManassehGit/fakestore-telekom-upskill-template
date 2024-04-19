@@ -1,13 +1,12 @@
 <div>
     <ul class="product-items">
-        <li *ngFor="let item of productsList">
-            <a class="card-item" [routerLink]="['/product', item.id]">
+        <li *ngFor="let item of productsList" class="card-item">
+            <a [routerLink]="['/product', item.id]">
                 <div class="card-image">
                     <img width="200" src="{{item.image}}" alt="{{item.title}}" />
                 </div>
                 <div class="card-info">
                     <h3>{{item.title}}</h3>
-                    <p>{{item.description}}</p>
                 </div>
             </a>
         </li>

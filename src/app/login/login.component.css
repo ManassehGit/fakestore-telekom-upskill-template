@@ -4,16 +4,30 @@
     min-height: 80dvh;
 }
 
-.form-field{
+.form-field form{
     margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .form-input label{
-    font-size: large;
+    font-size: medium;
+    display: flex;
+    gap: 0.2rem;
 }
 
-div.form-field ~ button {
-    border-radius: 1rem;
+.form-input input{
     padding: 0.5rem;
-    box-shadow: 0.5rem 0.5rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+}
+
+.login-button {
+    display: flex;
+    width: fit-content;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+    border: none;
 }

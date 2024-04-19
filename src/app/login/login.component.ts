@@ -21,8 +21,6 @@ export class LoginComponent {
     }else{
       this.authService.login(this.username, this.password)
       if(this.authService.isAuthenticated()){
-        this.username = "";
-        this.password = "";
         alert("Login successful")
         this.router.navigate(['/product-list']);
       }else{

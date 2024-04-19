@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { GetProductsService } from '../get-products.service';
 import { ProductType } from '../product-type';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 export class ProductsListComponent {
 
   productsList: ProductType[] = [];
-  constructor(private getProductsService: GetProductsService, private router: Router) {}
+  constructor(private getProductsService: GetProductsService) {}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -21,7 +20,4 @@ export class ProductsListComponent {
     });
   }
 
-  onItemClick(item: ProductType){
-    this.router.navigate([`/info/${item.id}`]);
-  }
 }
