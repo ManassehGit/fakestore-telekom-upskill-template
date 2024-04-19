@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    return localStorage.getItem(this.TOKEN_KEY) !== null;
+    return !!localStorage.getItem(this.TOKEN_KEY);
   }
 
   getUsernameObservable(): Observable<string | null> {

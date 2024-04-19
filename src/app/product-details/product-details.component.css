@@ -74,3 +74,23 @@
 .product-details{
     font-size: medium;
 }
+
+.add-to-cart .form-input{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.add-to-cart .form-input button{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: gray;
+    color: white
+}
+
+.add-to-cart .form-input input{
+    width: 4rem;
+}

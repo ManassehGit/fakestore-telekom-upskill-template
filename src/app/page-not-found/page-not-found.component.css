@@ -17,3 +17,8 @@
     margin: 0.5rem auto;
     border-radius: 0.5rem;
 }
+
+.not-found-page h3{
+    margin: 0px auto;
+    font-size: x-large;
+}

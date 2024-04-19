@@ -10,7 +10,8 @@ import { ProductType } from '../product-type';
 })
 export class ProductDetailsComponent {
   productId!: string | null;
-  productDetails!: ProductType
+  productDetails!: ProductType;
+  orderQuantity!: number;
 
   constructor(private route: ActivatedRoute, private getProductsService: GetProductsService){}
   
@@ -26,5 +27,9 @@ export class ProductDetailsComponent {
         });
       }
     })
+  }
+
+  addToCart(): void {
+
   }
 }
