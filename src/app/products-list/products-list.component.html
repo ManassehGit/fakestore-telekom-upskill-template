@@ -1,13 +1,15 @@
 <div>
-    <ul>
+    <ul class="product-items">
         <li *ngFor="let item of productsList">
-            <div>
-                <h3>{{item.title}}</h3>
-                <div>
-                    <img width="60" src="{{item.image}}" alt="{{item.title}}" />
+            <a class="card-item" [routerLink]="['/product', item.id]">
+                <div class="card-image">
+                    <img width="200" src="{{item.image}}" alt="{{item.title}}" />
                 </div>
-                <p>{{item.description}}</p>
-            </div>
+                <div class="card-info">
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.description}}</p>
+                </div>
+            </a>
         </li>
     </ul>
 </div>

@@ -13,5 +13,9 @@ export class GetProductsService {
   fetchProducts(): Observable<ProductType[]> {
     return this.http.get<ProductType[]>('https://fakestoreapi.com/products');
   }
+
+  fetchProductDetails(id: number): Observable<ProductType>{
+    return this.http.get<ProductType>('https://fakestoreapi.com/products/'+id);
+  }
 }
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GetProductsService } from '../get-products.service';
 import { ProductType } from '../product-type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -10,7 +11,7 @@ import { ProductType } from '../product-type';
 export class ProductsListComponent {
 
   productsList: ProductType[] = [];
-  constructor(private getProductsService: GetProductsService) {}
+  constructor(private getProductsService: GetProductsService, private router: Router) {}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -18,5 +19,9 @@ export class ProductsListComponent {
     this.getProductsService.fetchProducts().subscribe((response) => {
       this.productsList = response;
     });
+  }
+
+  onItemClick(item: ProductType){
+    this.router.navigate([`/info/${item.id}`]);
   }
 }

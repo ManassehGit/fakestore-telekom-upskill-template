@@ -1,2 +1,18 @@
-<p>login works!</p>
-
+<div class="container-grid">
+    <div>
+        <img src="assets/sampleSvg.svg" alt="login svg" />
+    </div>
+    <div class="form-field">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" [(ngModel)]="username" required />
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" [(ngModel)]="password" required />
+            </div>
+            <button type="submit">Submit</button>    
+        </form>
+    </div>
+</div>

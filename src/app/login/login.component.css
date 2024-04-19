@@ -1,0 +1,19 @@
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 80dvh;
+}
+
+.form-field{
+    margin: 3rem auto;
+}
+
+.form-input label{
+    font-size: large;
+}
+
+div.form-field ~ button {
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0;
+}
